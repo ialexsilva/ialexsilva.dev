@@ -5,21 +5,18 @@ import Image from 'next/image'
 import { parseISO, format, intervalToDuration } from 'date-fns'
 import Base from '../layouts/Base'
 import { ButtonPrimary } from '../components/ButtonPrimary'
-import Pronunciation from '../components/Pronunciation'
 import Toast from '../components/Toast'
 import stripHtml from '../lib/strip-html'
 import items from '../data/about'
 import Lottie from 'lottie-react'
-import copyBioIcon from '../public/static/icons/copy-bio.json'
-import downloadIcon from '../public/static/icons/download.json'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'About // Zeno Rocha',
+    title: 'About Me',
     description:
-      "Zeno Rocha is a Brazilian creator and programmer. He currently lives in Los Angeles, California, where he's the VP of Developer Experience at WorkOS. His lifelong appreciation for building software and sharing knowledge led him to speak in over 110 conferences worldwide. His passion for open source put him on the top 20 most active users on GitHub at age 22. Before moving to the US, Zeno developed multiple applications, mentored startups, and worked at major companies in Latin America, such as Globo and Petrobras.",
-    tagline: 'Create. Share. Repeat.',
-    image: '/static/images/about-bw.jpg',
+      "I'm a full-stack developer and designer who loves to solve problems, automate things and help people.",
+    tagline: 'Think Twice. Code Once!',
+    image: '/static/images/me_bw.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple',
   }
@@ -40,10 +37,10 @@ function About(props) {
       <Container>
         <Section>
           <Image
-            alt="Zeno"
-            src="/static/images/zeno-bw.jpg"
+            alt="Alex Silva"
+            src="/static/images/me_bw.jpg"
             width="336"
-            height="336"
+            height="356"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
             priority
@@ -56,67 +53,20 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            <strong>Hey, I'm Zeno Rocha</strong>
-            <Pronunciation />
-            I started as a software engineer back in 2009, working with Flash.
+            <strong>Olá, meu nome é Alex Silva 👋 </strong>Tenho 28 anos e sou
+            programador full-stack metido a designer.
           </Paragraph>
           <Paragraph>
-            I'm currently the <strong>VP of Developer Experience</strong> at
-            WorkOS. Before that, I was the CPO at Liferay Cloud. I'm originally
-            from Brazil and now living in{' '}
-            <strong>Los Angeles, California</strong> with my amazing wife and
-            beautiful daughter.
-          </Paragraph>
-          <Paragraph>
-            <strong>I love dark mode</strong>, open source, and side projects.
-            When I'm not working, I like running, watching movies, and{' '}
-            <strong>eating cheese</strong>.
+            Trabalho com desenvolvimento fullstack (back e front) e adoro
+            desenvolver para resolver problemas, automatizar coisas e ajudar
+            pessoas.{' '}
+            <Paragraph>
+              Em meu tempo livre gosto de jogar, puxar peso na academia 💪, e
+              ajudar na tradução de alguns projetos.
+            </Paragraph>
           </Paragraph>
         </Section>
       </Container>
-    )
-  }
-
-  const renderBio = () => {
-    const btnStyle = { display: 'inline-flex', justifyContent: 'center', alignItems: 'center' }
-    const iconStyle = { width: 24, height: 24, marginRight: 8 }
-
-    return (
-      <div>
-        <p>
-          This is made for journalists, podcast hosts, and event organizers to
-          copy-and-paste.
-        </p>
-        <blockquote>
-          <p>{description}</p>
-        </blockquote>
-        <ButtonsContainer>
-          <ButtonPrimary
-            as="button"
-            style={btnStyle}
-            onClick={copyBio}
-            onMouseEnter={() => copyBioRef.current?.play()}
-            onMouseLeave={() => copyBioRef.current?.stop()}
-          >
-            <Lottie lottieRef={copyBioRef} style={iconStyle} animationData={copyBioIcon} loop={false} autoplay={false} />
-            Copy Bio
-          </ButtonPrimary>
-          <span style={{ margin: '0 20px 0 10px' }}>•</span>
-          <ButtonPrimary
-            as="a"
-            download
-            role="button"
-            href="/static/images/zeno.png"
-            style={btnStyle}
-            onClick={downloadHeadshot}
-            onMouseEnter={() => downloadRef.current?.play()}
-            onMouseLeave={() => downloadRef.current?.stop()}
-          >
-            <Lottie lottieRef={downloadRef} style={iconStyle} animationData={downloadIcon} loop={false} autoplay={false} />
-            Download Headshot
-          </ButtonPrimary>
-        </ButtonsContainer>
-      </div>
     )
   }
 
@@ -188,14 +138,11 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://zenorocha.com/about" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://ialexsilva.dev/about" property="og:url" />
+        <meta content={`https://ialexsilva.dev${image}`} property="og:image" />
       </Head>
 
       {renderIntro()}
-
-      <h2>Bio</h2>
-      {renderBio()}
 
       <h2>Career</h2>
       {renderAll()}

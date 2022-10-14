@@ -9,8 +9,9 @@ import { Wrapper } from '../components/Wrapper'
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Zeno Rocha',
-      description: 'Building world-class products that make developers happy',
+      title: 'Alex Silva',
+      description:
+        'Full-Stack Developer based in Brazil with a passion for developing of all types, and sizes',
       image: '/static/images/home-bw.jpg',
     },
   }
@@ -26,8 +27,8 @@ export default function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={description} name="description" />
         <meta content={description} property="og:description" />
-        <meta content="https://zenorocha.com" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://ialexsilva.dev" property="og:url" />
+        <meta content={`https://ialexsilva.dev${image}`} property="og:image" />
       </Head>
 
       <Navbar />
@@ -37,9 +38,13 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>VP of Developer Experience at{' '}
-                  <a href="https://workos.com" target="blank">WorkOS</a>
-                </strong>.<br />
+                {/* <strong>
+                  Aqui o sub-titulo{' '}
+                  <a href="https://ialexsilva.dev" target="blank">
+                    Nome
+                  </a>
+                </strong>
+                .<br /> */}
                 {description}.
               </p>
               <ShortcutHome />

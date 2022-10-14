@@ -4,27 +4,26 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion, AnimateSharedLayout } from 'framer-motion'
 import { useKBar } from 'kbar'
+import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
-  const pages = [
-    'About',
-    'Articles',
-    'Projects',
-    'Talks',
-    'Podcasts',
-    'Investing',
-    'Uses',
-    'Reminder',
-  ]
+  const pages = ['About', 'Articles', 'Projects', 'Contact']
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
 
   return (
     <AnimateSharedLayout>
       <Header>
-        <Link href="/" passHref>
-          <ButtonLogo as="a">z</ButtonLogo>
+        <Link href="/">
+          <Logo>
+            <Image
+              src="/static/images/logo_inverted.png"
+              width={32}
+              height={32}
+              alt="Logo ialexsilva.dev"
+            />
+          </Logo>
         </Link>
 
         <Nav>
@@ -116,6 +115,7 @@ const ButtonHeader = styled('div', {
   color: 'white',
   cursor: 'pointer',
   cursor: 'pointer',
+  textDecoration: 'none',
   height: '34px',
   padding: '0 10px',
   transition: 'background $duration ease-in-out',
@@ -127,7 +127,7 @@ const Icon = styled('i', {
   lineHeight: '32px',
 })
 
-const ButtonLogo = styled(ButtonHeader, {
+const Logo = styled(ButtonHeader, {
   fontWeight: 700,
   fontSize: '32px',
   textDecoration: 'none',

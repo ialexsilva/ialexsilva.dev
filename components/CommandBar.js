@@ -57,7 +57,15 @@ export default function CommandBar(props) {
       keywords: 'copy-link',
       section: 'General',
       perform: copyLink,
-      icon: <Lottie lottieRef={copyLinkRef} style={iconSize} animationData={copyLinkIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={copyLinkRef}
+          style={iconSize}
+          animationData={copyLinkIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
     {
       id: 'email',
@@ -66,18 +74,26 @@ export default function CommandBar(props) {
       keywords: 'send-email',
       section: 'General',
       perform: () => router.push('/contact'),
-      icon: <Lottie lottieRef={emailRef} style={iconSize} animationData={emailIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={emailRef}
+          style={iconSize}
+          animationData={emailIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
-    {
-      id: 'source',
-      name: 'View Source',
-      shortcut: ['s'],
-      keywords: 'view-source',
-      section: 'General',
-      perform: () =>
-        window.open('https://github.com/zenorocha/zenorocha.com', '_blank'),
-      icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
-    },
+    // {
+    //   id: 'source',
+    //   name: 'View Source',
+    //   shortcut: ['s'],
+    //   keywords: 'view-source',
+    //   section: 'General',
+    //   perform: () =>
+    //     window.open('https://github.com/zenorocha/zenorocha.com', '_blank'),
+    //   icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
+    // },
     {
       id: 'home',
       name: 'Home',
@@ -85,7 +101,15 @@ export default function CommandBar(props) {
       keywords: 'go-home',
       section: 'Go To',
       perform: () => router.push('/'),
-      icon: <Lottie lottieRef={homeRef} style={iconSize} animationData={homeIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={homeRef}
+          style={iconSize}
+          animationData={homeIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
     {
       id: 'about',
@@ -94,7 +118,15 @@ export default function CommandBar(props) {
       keywords: 'go-about',
       section: 'Go To',
       perform: () => router.push('/about'),
-      icon: <Lottie lottieRef={aboutRef} style={iconSize} animationData={aboutIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={aboutRef}
+          style={iconSize}
+          animationData={aboutIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
     {
       id: 'articles',
@@ -103,7 +135,15 @@ export default function CommandBar(props) {
       keywords: 'go-articles',
       section: 'Go To',
       perform: () => router.push('/articles'),
-      icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={articlesRef}
+          style={iconSize}
+          animationData={articlesIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
     {
       id: 'projects',
@@ -112,53 +152,101 @@ export default function CommandBar(props) {
       keywords: 'go-projects',
       section: 'Go To',
       perform: () => router.push('/projects'),
-      icon: <Lottie lottieRef={projectsRef} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
+      icon: (
+        <Lottie
+          lottieRef={projectsRef}
+          style={iconSize}
+          animationData={projectsIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
     },
-    {
-      id: 'talks',
-      name: 'Talks',
-      shortcut: ['g', 't'],
-      keywords: 'go-talks',
-      section: 'Go To',
-      perform: () => router.push('/talks'),
-      icon: <Lottie lottieRef={talksRef} style={iconSize} animationData={talksIcon} loop={false} autoplay={false} />,
-    },
-    {
-      id: 'podcasts',
-      name: 'Podcasts',
-      shortcut: ['g', 'c'],
-      keywords: 'go-podcasts',
-      section: 'Go To',
-      perform: () => router.push('/podcasts'),
-      icon: <Lottie lottieRef={podcastsRef} style={iconSize} animationData={podcastsIcon} loop={false} autoplay={false} />,
-    },
-    {
-      id: 'investing',
-      name: 'Investing',
-      shortcut: ['g', 'i'],
-      keywords: 'go-investing',
-      section: 'Go To',
-      perform: () => router.push('/investing'),
-      icon: <Lottie lottieRef={investingRef} style={iconSize} animationData={investingIcon} loop={false} autoplay={false} />,
-    },
-    {
-      id: 'uses',
-      name: 'Uses',
-      shortcut: ['g', 'u'],
-      keywords: 'go-uses',
-      section: 'Go To',
-      perform: () => router.push('/uses'),
-      icon: <Lottie lottieRef={usesRef} style={iconSize} animationData={usesIcon} loop={false} autoplay={false} />,
-    },
-    {
-      id: 'reminder',
-      name: 'Reminder',
-      shortcut: ['g', 'r'],
-      keywords: 'go-reminder',
-      section: 'Go To',
-      perform: () => router.push('/reminder'),
-      icon: <Lottie lottieRef={reminderRef} style={iconSize} animationData={reminderIcon} loop={false} autoplay={false} />,
-    },
+    // {
+    //   id: 'talks',
+    //   name: 'Talks',
+    //   shortcut: ['g', 't'],
+    //   keywords: 'go-talks',
+    //   section: 'Go To',
+    //   perform: () => router.push('/talks'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={talksRef}
+    //       style={iconSize}
+    //       animationData={talksIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // {
+    //   id: 'podcasts',
+    //   name: 'Podcasts',
+    //   shortcut: ['g', 'c'],
+    //   keywords: 'go-podcasts',
+    //   section: 'Go To',
+    //   perform: () => router.push('/podcasts'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={podcastsRef}
+    //       style={iconSize}
+    //       animationData={podcastsIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // {
+    //   id: 'investing',
+    //   name: 'Investing',
+    //   shortcut: ['g', 'i'],
+    //   keywords: 'go-investing',
+    //   section: 'Go To',
+    //   perform: () => router.push('/investing'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={investingRef}
+    //       style={iconSize}
+    //       animationData={investingIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // {
+    //   id: 'uses',
+    //   name: 'Uses',
+    //   shortcut: ['g', 'u'],
+    //   keywords: 'go-uses',
+    //   section: 'Go To',
+    //   perform: () => router.push('/uses'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={usesRef}
+    //       style={iconSize}
+    //       animationData={usesIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // {
+    //   id: 'reminder',
+    //   name: 'Reminder',
+    //   shortcut: ['g', 'r'],
+    //   keywords: 'go-reminder',
+    //   section: 'Go To',
+    //   perform: () => router.push('/reminder'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={reminderRef}
+    //       style={iconSize}
+    //       animationData={reminderIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
   ]
 
   return (

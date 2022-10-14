@@ -7,9 +7,9 @@ export default async function sendEmail(req, res) {
     const data = req.body
 
     await klotty.sendEmail({
-      from: 'zenorocha.com <website@zenorocha.com>',
-      to: 'zno.rocha@gmail.com',
-      subject: `${data.name} - via zenorocha.com`,
+      from: 'ialexsilva.dev <website@ialexsilva.dev>',
+      to: 'ialexsilva@outlook.com',
+      subject: `${data.name} - via ialexsilva.dev`,
       react: <EmailTemplate {...data} />,
     })
 
