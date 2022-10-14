@@ -29,8 +29,6 @@ function About(props) {
   const [toastTitle, setToastTitle] = React.useState('')
   const [toastDescription, setToastDescription] = React.useState('')
   const [showToast, setShowToast] = React.useState(false)
-  const copyBioRef = React.useRef()
-  const downloadRef = React.useRef()
 
   const renderIntro = () => {
     return (
@@ -59,11 +57,11 @@ function About(props) {
           <Paragraph>
             Trabalho com desenvolvimento fullstack (back e front) e adoro
             desenvolver para resolver problemas, automatizar coisas e ajudar
-            pessoas.{' '}
-            <Paragraph>
-              Em meu tempo livre gosto de jogar, puxar peso na academia 💪, e
-              ajudar na tradução de alguns projetos.
-            </Paragraph>
+            pessoas.
+          </Paragraph>
+          <Paragraph>
+            Em meu tempo livre gosto de jogar, puxar peso na academia 💪, e
+            ajudar na tradução de alguns projetos.
           </Paragraph>
         </Section>
       </Container>
@@ -116,21 +114,6 @@ function About(props) {
     return durationStr
   }
 
-  const downloadHeadshot = () => {
-    setToastTitle('Downloading...')
-    setToastDescription('You can now add this photo to your fancy site.')
-    setShowToast(true)
-  }
-
-  const copyBio = e => {
-    e.preventDefault()
-    navigator.clipboard.writeText(description)
-
-    setToastTitle('Copied :D')
-    setToastDescription('You can now paste it anywhere.')
-    setShowToast(true)
-  }
-
   return (
     <>
       <Head>
@@ -167,11 +150,6 @@ const Container = styled('div', {
 
 const Paragraph = styled('p', {
   '@bp2': { margin: '15px 0' },
-})
-
-const ButtonsContainer = styled('p', {
-  display: 'flex',
-  alignItems: 'center',
 })
 
 const Section = styled('div', {
