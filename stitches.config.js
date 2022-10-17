@@ -17,6 +17,8 @@ export const {
       purple: '#9580ff',
       red: '#ff9580',
       orange: '#ffca80',
+      lavander: '#9f6bea',
+      indingo: '#6358ee',
       green: '#8aff80',
       cyan: '#80ffea',
       primary: '#f2f2f2',

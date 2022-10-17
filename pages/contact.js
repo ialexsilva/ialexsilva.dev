@@ -11,8 +11,8 @@ export async function getStaticProps() {
     title: 'Contact Me',
     tagline: 'Email me. Like in the old days.',
     image: '/static/images/reminder-bw.jpg',
-    primaryColor: 'cyan',
-    secondaryColor: 'green',
+    primaryColor: 'lavander',
+    secondaryColor: 'indingo',
   }
 
   return { props: meta }
