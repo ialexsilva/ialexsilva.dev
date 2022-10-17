@@ -1,6 +1,7 @@
 ---
 title: A cidade mais perigosa da internet
 description: "A cidade mais perigosa da Internet é uma série de documentários produzido pela Norton que explora os locais ocultos que obscurecem o discernimento entre o universo físico e digital."
+image: /static/img/posts/em-busca-da-cidade-mais-perigosa-do-mundo.jpeg
 date: "2016-04-27"
 ---
 
