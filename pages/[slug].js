@@ -33,7 +33,7 @@ function Post(props) {
       </Head>
 
       <ArticleJsonLd
-        authorName="Zeno Rocha"
+        authorName="Alex Silva"
         type="Blog"
         url={url}
         title={title}
@@ -67,10 +67,9 @@ export async function getStaticProps({ params }) {
     const base = isProd ? 'https://ialexsilva.dev' : 'http://localhost:3000'
 
     if (isProd) {
-      const viewsReq = await fetch(`${base}/api/views/${params.slug}`)
-      const viewsRes = await viewsReq.json()
-
-      post.views = new Intl.NumberFormat().format(viewsRes.views || 0)
+      // const viewsReq = await fetch(`${base}/api/views/${params.slug}`)
+      // const viewsRes = await viewsReq.json()
+      // post.views = new Intl.NumberFormat().format(viewsRes.views || 0)
     }
 
     return {
