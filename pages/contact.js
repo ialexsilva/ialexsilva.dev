@@ -67,14 +67,14 @@ function Contact(props) {
         <Form onSubmit={onSendEmail}>
           <FormGroup>
             <Label htmlFor="name">Name</Label>
-            <Input id="name" type="text" placeholder="James Bond" required />
+            <Input id="name" type="text" placeholder="John Wick" required />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               type="email"
-              placeholder="james@bond.com"
+              placeholder="john@wick.com"
               required
             />
           </FormGroup>
@@ -82,7 +82,7 @@ function Contact(props) {
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="How can I help you?"
+              placeholder="Describe the purpose of this contact here..."
               rows="4"
               required
             />
