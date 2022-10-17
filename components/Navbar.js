@@ -141,7 +141,7 @@ const Nav = styled('nav', {
   order: 2,
   flexBasis: '100%',
   '@bp2': { order: 0, flexBasis: 'initial' },
-  '@bp3': { overflowX: 'scroll', overflowY: 'hidden' },
+  '@bp3': { overflowX: 'auto', overflowY: 'hidden' },
 })
 
 const Aside = styled('div', {
