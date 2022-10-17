@@ -55,9 +55,8 @@ function About(props) {
             programador full-stack metido a designer.
           </Paragraph>
           <Paragraph>
-            Trabalho com desenvolvimento fullstack (back e front) e adoro
-            desenvolver para resolver problemas, automatizar coisas e ajudar
-            pessoas.
+            Trabalho com desenvolvimento Full-Stack e adoro desenvolver para
+            resolver problemas, automatizar coisas e ajudar pessoas.
           </Paragraph>
           <Paragraph>
             Em meu tempo livre gosto de jogar, puxar peso na academia 💪, e
