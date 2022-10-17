@@ -21,7 +21,6 @@ export async function getStaticProps() {
   ]
 
   const featuredPosts = [
-    getPostBySlug('the-two-types-of-quality', featuredParams),
     getPostBySlug('what-makes-a-good-changelog', featuredParams),
   ]
 
