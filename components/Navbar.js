@@ -21,7 +21,7 @@ export default function Navbar() {
               src="/static/images/logo_inverted.png"
               width={32}
               height={32}
-              alt="Logo ialexsilva.dev"
+              alt="Logo ialexsilva"
             />
           </Logo>
         </Link>
