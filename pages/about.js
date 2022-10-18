@@ -51,8 +51,8 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            <strong>Olá, meu nome é Alex Silva 👋 </strong>Tenho 28 anos e sou
-            programador full-stack metido a designer.
+            <strong>Olá, meu nome é Alex Silva 👋 </strong>Tenho {getYearsOld()}{' '}
+            anos e sou programador full-stack metido a designer.
           </Paragraph>
           <Paragraph>
             Trabalho com desenvolvimento Full-stack e adoro desenvolver para
@@ -65,6 +65,13 @@ function About(props) {
         </Section>
       </Container>
     )
+  }
+
+  const getYearsOld = () => {
+    const birthDate = parseISO('1994-03-09')
+    const now = new Date()
+    const { years } = intervalToDuration({ start: birthDate, end: now })
+    return years
   }
 
   const renderAll = () => {
