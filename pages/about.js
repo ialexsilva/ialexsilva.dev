@@ -59,8 +59,8 @@ function About(props) {
             resolver problemas, automatizar coisas e ajudar pessoas.
           </Paragraph>
           <Paragraph>
-            Em meu tempo livre gosto de jogar, puxar peso na academia 💪, e
-            ajudar na tradução de alguns projetos.
+            Uso meu tempo livre para 🎮 jogar, 🏋️ academia, e ajudar na tradução
+            de alguns projetos.
           </Paragraph>
         </Section>
       </Container>
