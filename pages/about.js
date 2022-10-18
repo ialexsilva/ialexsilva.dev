@@ -51,8 +51,8 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            <strong>Olá, meu nome é Alex Silva 👋 </strong>Tenho {getYearsOld()}{' '}
-            anos e sou programador full-stack metido a designer.
+            <strong>👋🏼 Olá, meu nome é Alex Silva</strong> Tenho {getYearsOld()}{' '}
+            anos e sou programador metido a designer.
           </Paragraph>
           <Paragraph>
             Trabalho com desenvolvimento Full-stack e adoro desenvolver para
