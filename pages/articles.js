@@ -21,7 +21,7 @@ export async function getStaticProps() {
   ]
 
   const featuredPosts = [
-    getPostBySlug('what-makes-a-good-changelog', featuredParams),
+    getPostBySlug('a-cidade-mais-perigosa-da-internet', featuredParams),
   ]
 
   return {
@@ -72,7 +72,7 @@ function Articles(props) {
   }
 
   const { title, image } = props
-  const description = `Here you can find all the <strong>${props.allPosts.length} articles</strong> I wrote. You can read about web development, software engineering in both English and Portuguese.`
+  const description = `Here you can find all the <strong>${props.allPosts.length} articles</strong> I wrote and share.`
 
   return (
     <>
