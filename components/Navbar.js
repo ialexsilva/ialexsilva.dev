@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
-  const pages = ['About', 'Articles', 'Projects', 'Contact']
+  const pages = ['About', 'Projects', 'Contact']
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
 
