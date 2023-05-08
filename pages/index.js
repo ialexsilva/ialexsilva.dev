@@ -12,7 +12,7 @@ export async function getStaticProps() {
       title: 'Alex Silva',
       description:
         'Full-Stack Developer based in Brazil with a passion for developing of all types, and sizes',
-      image: '/static/images/home-bw.jpg',
+      image: '/static/images/logo.png',
     },
   }
 }
