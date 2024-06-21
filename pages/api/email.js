@@ -1,14 +1,15 @@
-import { Klotty } from 'klotty'
-const klotty = new Klotty(process.env.KLOTTY_API_KEY)
+import { Resend } from 'resend'
+const resend = new Resend(process.env.RESEND_API_KEY)
 import EmailTemplate from '../../components/EmailTemplate'
 
 export default async function sendEmail(req, res) {
   try {
     const data = req.body
 
-    await klotty.sendEmail({
-      from: 'contato@ialexsilva.dev',
-      to: 'ialexsilva@outlook.com',
+    await resend.sendEmail({
+      from: 'ialexsilva.dev <contato@ialexsilva.dev>',
+      to: 'eu@ialexsilva.dev',
+      replyTo: data.email,
       subject: `${data.name} - via ialexsilva.dev`,
       react: <EmailTemplate {...data} />,
     })

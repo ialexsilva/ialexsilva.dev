@@ -9,7 +9,7 @@ import { styled } from '../stitches.config'
 export async function getStaticProps() {
   const meta = {
     title: 'Contact Me',
-    tagline: 'Email me. Like in the old days.',
+    tagline: 'Drop me an email. Just like we used to.',
     image: '/static/images/reminder-bw.jpg',
     primaryColor: 'lavander',
     secondaryColor: 'indingo',
